@@ -9,9 +9,12 @@ Este entrenamiento está diseñado para elevar tus habilidades de automatizació
 ### Contenido del Entrenamiento
 
 - **Niveles de Aprendizaje**:
-  - Iniciaremos desde los conceptos básicos de Selenium WebDriver.
-  - Avanzaremos progresivamente a técnicas y prácticas avanzadas de automatización.
-  - Ofreceremos sesiones interactivas con ejercicios prácticos en [QAXpert Hands-On](https://qaxpert.com/hands-on).
+  - **Nivel Básico**:
+    - Encuentra el repositorio del nivel básico [aquí](https://github.com/QAXpert/qa_automation_selenium/tree/main/selenium_basic).
+    - Incluye material introductorio para empezar con Selenium WebDriver.
+  - **Niveles Intermedio y Avanzado**:
+    - Avanzaremos progresivamente a técnicas y prácticas más complejas.
+    - Ofreceremos sesiones interactivas con ejercicios prácticos en [QAXpert Hands-On](https://qaxpert.com/hands-on).
 
 ### Recursos Adicionales
 
