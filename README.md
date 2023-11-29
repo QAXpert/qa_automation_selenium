@@ -13,7 +13,7 @@ Este proyecto tiene como objetivo proporcionar un entorno estructurado y listo p
 
 #### Pasos a seguir:
 1. **Instalar Java JDK 19.02**:
-   - Dirígete al sitio web de Oracle o a tu gestor de paquetes preferido para descargar e instalar JDK 19.02.
+   - Dirígete al [sitio de descarga de Oracle](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) o a tu gestor de paquetes preferido para descargar e instalar JDK 19.02.
    - Verifica la instalación ejecutando `java --version` en tu terminal o línea de comandos.
 
 Para más detalles sobre configuración, ejecución de pruebas y desarrollo en este entorno, consulta la documentación detallada en [qaxpert.com](https://qaxpert.com).
