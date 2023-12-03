@@ -1,4 +1,4 @@
-## Automatización con Selenium, Java y Maven
+## Automatización con Selenium, Java y Maven usando patron POM.
 
 Este repositorio está diseñado para facilitar la automatización de pruebas utilizando Selenium WebDriver con Java y Maven, integrando también TestNG para una ejecución y manejo efectivos de pruebas de interfaz de usuario.
 
