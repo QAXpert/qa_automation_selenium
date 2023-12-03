@@ -1,10 +1,11 @@
-// Importa las clases necesarias de Selenium
+package pages.loginPage;// Importa las clases necesarias de Selenium
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import pages.BasePage;
 
 import java.nio.file.Paths;
 
-// Declaración de la clase LoginPage que hereda de BasePage para utilizar sus métodos comunes
+// Declaración de la clase pages.loginPage.LoginPage que hereda de pages.BasePage para utilizar sus métodos comunes
 public class LoginPage extends BasePage {
 
     // Localizadores (By) para los elementos en la página de inicio de sesión
@@ -13,27 +14,27 @@ public class LoginPage extends BasePage {
     By submitButton = By.cssSelector("button");
     By successBox = By.id("success");
 
-    // Constructor de la clase LoginPage que recibe un objeto WebDriver y un tiempo de espera explícita personalizado
+    // Constructor de la clase pages.loginPage.LoginPage que recibe un objeto WebDriver y un tiempo de espera explícita personalizado
     public LoginPage(WebDriver driver, int timeoutSec) {
-        // Llama al constructor de la clase base (BasePage) con el objeto WebDriver
+        // Llama al constructor de la clase base (pages.BasePage) con el objeto WebDriver
         this(driver);
         // Establece el tiempo de espera explícita con el valor personalizado
         setTimeoutSec(timeoutSec);
     }
 
-    // Constructor de la clase LoginPage que recibe solo un objeto WebDriver
+    // Constructor de la clase pages.loginPage.LoginPage que recibe solo un objeto WebDriver
     public LoginPage(WebDriver driver) {
-        // Llama al constructor de la clase base (BasePage) con el objeto WebDriver
+        // Llama al constructor de la clase base (pages.BasePage) con el objeto WebDriver
         super(driver);
         // Obtiene la ruta relativa del archivo HTML de la página de inicio de sesión
         String filePath = Paths.get("src", "main", "resources", "qaxpertLogin.html").toAbsolutePath().toString();
-        // Visita la página de inicio de sesión utilizando el método visit() de BasePage
+        // Visita la página de inicio de sesión utilizando el método visit() de pages.BasePage
         visit("file:///" + filePath);
     }
 
     // Método para ingresar credenciales y realizar clic en el botón de inicio de sesión
     public void with(String username, String password) {
-        // Utiliza los métodos de BasePage (type y click) para ingresar credenciales y hacer clic en el botón
+        // Utiliza los métodos de pages.BasePage (type y click) para ingresar credenciales y hacer clic en el botón
         type(usernameInput, username);
         type(passwordInput, password);
         click(submitButton);
@@ -41,7 +42,7 @@ public class LoginPage extends BasePage {
 
     // Método para verificar la presencia del cuadro de éxito después de iniciar sesión
     public boolean successBoxPresent() {
-        // Utiliza el método isDisplayed de BasePage para verificar la visibilidad del cuadro de éxito
+        // Utiliza el método isDisplayed de pages.BasePage para verificar la visibilidad del cuadro de éxito
         return isDisplayed(successBox);
     }
 

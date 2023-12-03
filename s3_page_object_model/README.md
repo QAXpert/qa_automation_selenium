@@ -24,8 +24,8 @@ Este proyecto tiene como objetivo proporcionar un entorno estructurado y listo p
    - Haz clic en `Create`  para crear el proyecto.
 
      3. **Configurar el proyecto con Maven**:
-        - Abre el archivo `pom.xml` dentro de tu proyecto.
-        - Asegúrate de que la estructura del archivo `pom.xml` sea similar a la siguiente:
+        - Abre el archivo `pages.xml` dentro de tu proyecto.
+        - Asegúrate de que la estructura del archivo `pages.xml` sea similar a la siguiente:
 
         ```xml
         <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

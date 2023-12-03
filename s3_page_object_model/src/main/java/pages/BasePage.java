@@ -1,4 +1,4 @@
-// Importa las clases necesarias de Selenium
+package pages;// Importa las clases necesarias de Selenium
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -7,14 +7,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
-// Declaración de la clase BasePage, que proporciona funciones comunes para interactuar con páginas web
+// Declaración de la clase pages.BasePage, que proporciona funciones comunes para interactuar con páginas web
 public class BasePage {
 
     WebDriver driver; // Objeto WebDriver para interactuar con el navegador
     WebDriverWait wait; // Objeto WebDriverWait para esperas explícitas
     int timeoutSec = 5; // Tiempo de espera predeterminado en segundos (5 segundos por defecto)
 
-    // Constructor de la clase BasePage que recibe un objeto WebDriver y configura la espera explícita
+    // Constructor de la clase pages.BasePage que recibe un objeto WebDriver y configura la espera explícita
     public BasePage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSec));

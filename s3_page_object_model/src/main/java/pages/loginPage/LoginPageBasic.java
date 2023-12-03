@@ -1,5 +1,5 @@
 // Importa las clases necesarias para Selenium y otras utilidades de Java
-package LoginPage;
+package pages.loginPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,5 +1,5 @@
 // Importa las clases necesarias para Selenium, TestNG y otras utilidades
-import LoginPage.LoginPageBasic;
+import pages.loginPage.LoginPageBasic;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
