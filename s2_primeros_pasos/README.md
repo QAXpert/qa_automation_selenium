@@ -67,23 +67,4 @@ Este proyecto tiene como objetivo proporcionar un entorno estructurado y listo p
              </project>
            - Instalar dependencias
 
-
-## Estructura del Proyecto
-
-En el directorio `selenium_basic`, se encuentran varios ejemplos de configuración de drivers para Chrome y Firefox:
-
-- `/selenium_basic/src/test/java/helloWorld_DriverChrome.java`
-- `/selenium_basic/src/test/java/helloWorld_DriverFirefox.java`
-
-Estos archivos, `helloWorld_DriverChrome` y `helloWorld_DriverFirefox`, están configurados para utilizar un driver específico para cada navegador. Se recomienda mantener actualizados estos drivers según la máquina en la que se ejecuten.
-
-Además, dentro del mismo directorio, se encuentran:
-
-- `/selenium_basic/src/test/java/helloWorldChrome.java`
-- `/selenium_basic/src/test/java/helloWorldFirefox.java`
-
-Estos archivos utilizan la librería `WebDriverManager` de Boni Garcia, lo que proporciona la ventaja de utilizar cualquier driver de navegador sin preocuparse por la versión instalada actualmente. Esto simplifica la gestión de los drivers y evita la necesidad de actualizar manualmente las versiones.
-
-La elección entre usar un driver específico o `WebDriverManager` depende de las necesidades del proyecto y las preferencias de mantenimiento de los drivers de navegador.
-
-Para más detalles sobre configuración, ejecución de pruebas y desarrollo en este entorno, consulta la documentación detallada en [qaxpert.com](https://qaxpert.com).
+   
