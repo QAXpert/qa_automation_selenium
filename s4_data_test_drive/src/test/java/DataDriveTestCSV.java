@@ -37,9 +37,7 @@ public class DataDriveTestCSV {
 
 
         homePage = new HomePage(driver);
-        // Validamos que el boton de agendar asesoria este disponible
         if (homePage.isTitle()) {
-            // Clck en boton de agendar asesoria
             try {
                 homePage.clickButton();
             } catch (InterruptedException e) {
@@ -60,6 +58,7 @@ public class DataDriveTestCSV {
             addInfo.fillEmail(csvCell[1]);
             addInfo.fillEdad(csvCell[2]);
             addInfo.EnviarInformacion();
+            //click alert
             Thread.sleep(2000);
         }
 

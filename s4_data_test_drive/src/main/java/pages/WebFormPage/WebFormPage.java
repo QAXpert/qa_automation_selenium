@@ -37,18 +37,16 @@ public class WebFormPage {
 
     // Métodos que realizara recibiran un texto a llenar en cada campo
     public void fillName(String text) {
-        driver.findElement(name).clear();
-        driver.findElement(name).sendKeys(text);
+        fillText(name,text);
+
     }
 
     public void fillEmail(String text) {
-        driver.findElement(email).clear();
-        driver.findElement(email).sendKeys(text);
+        fillText(email,text);
     }
 
     public void fillEdad(String text) {
-        driver.findElement(edad).clear();
-        driver.findElement(edad).sendKeys(text);
+        fillText(edad,text);
     }
 
 
