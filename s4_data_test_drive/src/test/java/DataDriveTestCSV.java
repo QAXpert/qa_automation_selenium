@@ -12,6 +12,7 @@ import pages.homePage.HomePage;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Set;
 
 public class DataDriveTestCSV {
     private WebDriver driver;
@@ -59,6 +60,7 @@ public class DataDriveTestCSV {
             addInfo.fillEdad(csvCell[2]);
             addInfo.EnviarInformacion();
             //click alert
+           //driver.switchTo().alert().accept();
             Thread.sleep(2000);
         }
 

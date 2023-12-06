@@ -1,4 +1,3 @@
-import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -10,11 +9,9 @@ import org.testng.annotations.Test;
 import pages.WebFormPage.WebFormPage;
 import pages.homePage.HomePage;
 
-import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Paths;
 
-public class DataDriveTestCSVParameters {
+public class DataDriveTestXMLParameters {
     private WebDriver driver;
     private HomePage homePage;
     private WebFormPage addInfo;
@@ -54,6 +51,7 @@ public class DataDriveTestCSVParameters {
         addInfo.fillEmail(email);
         addInfo.fillEdad(edad);
         addInfo.EnviarInformacion();
+        //driver.switchTo().alert().accept();
         Thread.sleep(2000);
 
 
@@ -61,7 +59,7 @@ public class DataDriveTestCSVParameters {
 
     @AfterTest
     public void afterTest() {
-        driver.quit();
+        driver.close();
     }
 
 }
