@@ -1,15 +1,14 @@
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import pages.WebFormPage.WebFormPage;
 import pages.homePage.HomePage;
 
-public class DataDrivenTestingUsingDataProvider {
+
+public class DataDrivenTestingUsingDataProviderPOO {
 
     private WebDriver driver;
     private HomePage homePage;
@@ -23,17 +22,9 @@ public class DataDrivenTestingUsingDataProvider {
         driver.get("https://qaxpert.com/webform-lab/");
     }
 
-    @DataProvider(name = "dataprovider")
-    public Object[][] metodoDataProvider() {
-        return new Object[][] {
-                { "Juan", "Gomez@yahoo.com", "23" },
-                { "David", "Diaz@gmail.com", "28" },
-                };
-    }
 
-    @Test(dataProvider = "dataprovider")
+    @Test(dataProvider = "dataprovider", dataProviderClass = data_provider.class)
     public void webForm(String name, String email, String edad) throws InterruptedException {
-
         homePage = new HomePage(driver);
         if (homePage.isTitle()) {
             // Clck en boton de agendar asesoria

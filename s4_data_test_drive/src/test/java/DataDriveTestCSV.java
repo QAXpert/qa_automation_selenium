@@ -67,7 +67,7 @@ public class DataDriveTestCSV {
 
     @AfterTest
     public void afterTest() {
-        driver.close();
+        driver.quit();
     }
 
 }
