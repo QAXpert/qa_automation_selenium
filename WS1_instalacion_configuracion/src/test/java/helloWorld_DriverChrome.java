@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class helloWorld_DriverChrome {
 
     WebDriver chromeDriver;
-    @BeforeMethod
+    @BeforeTest
     public void setup() {
         // Configuración del ChromeDriver (asegúrate de tener el ejecutable en la ruta correcta)
         // Supports Chrome version 114
@@ -18,7 +18,7 @@ public class helloWorld_DriverChrome {
 
     }
 
-    @AfterMethod
+    @AfterTest
     public void teardown() {
         if (chromeDriver != null) {
             chromeDriver.quit();
