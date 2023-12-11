@@ -14,13 +14,13 @@ import java.util.List;
 public class Home {
 
     private WebDriver driver;
-     By shopNowButtonLinkText = By.xpath("/html/body/shop-app//iron-pages/shop-home//div[1]/shop-button/a");
+     By shopNowButtonXpath = By.xpath("/html/body/shop-app//iron-pages/shop-home//div[1]/shop-button/a");
 
     public Home(WebDriver driver) {
         this.driver = driver;
     }
 
     public void clickOnASection() {
-        driver.findElement(shopNowButtonLinkText).click();
+        driver.findElement(shopNowButtonXpath).click();
     }
 }
