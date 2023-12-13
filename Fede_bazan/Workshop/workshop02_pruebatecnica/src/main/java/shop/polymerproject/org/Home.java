@@ -15,12 +15,14 @@ public class Home {
 
     private WebDriver driver;
      By shopNowButtonXpath = By.xpath("/html/body/shop-app//iron-pages/shop-home//div[1]/shop-button/a");
-
+     By mensOuterwearLinkText = By.linkText("Men's Outerwear");
+     By mensOuterwearCssSelector = By.cssSelector("a[href='/list/mens_outerwear']");
     public Home(WebDriver driver) {
         this.driver = driver;
     }
 
     public void clickOnASection() {
-        driver.findElement(shopNowButtonXpath).click();
+        WebElement elemento = driver.findElement(By.cssSelector("a[href='/list/mens_outerwear']"));
+        elemento.click();
     }
 }

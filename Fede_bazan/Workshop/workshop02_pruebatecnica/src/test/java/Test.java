@@ -27,7 +27,7 @@ public class Test {
     }
 
     @org.testng.annotations.Test
-    public void connection(){
+    public void testConnection(){
         driver.get("https://shop.polymer-project.org");
         Assert.assertEquals("Home - SHOP",driver.getTitle());
     }
