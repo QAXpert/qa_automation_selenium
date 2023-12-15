@@ -13,7 +13,7 @@ Este entrenamiento está diseñado para elevar tus habilidades de automatizació
     - Realizar instalación del entorno local en este [articulo](https://qaxpert.com/selenium-webdriver-instalacion-y-configuracion/) 
     - Encuentra el repositorio del nivel básico [aquí](https://github.com/QAXpert/qa_automation_selenium/tree/main/WS1_instalacion_configuracion).
   - **Primeros pasos automatizando**:
-    - Proximamente...
+    - Desarrollando prueba tecnica par la posicion de [QA Automation Junior en selenium](https://github.com/QAXpert/qa_automation_selenium/tree/main/WS2_automatizacion_e_commerce)
 
 ### Recursos Adicionales
 
