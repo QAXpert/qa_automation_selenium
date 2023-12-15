@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="ChromeTest">
+        <parameter name="browser" value="Chrome" />
+        <parameter name="driver_name" value="webdriver.chrome.driver" />
+        <parameter name="driver_path" value="src/test/resources/webdrivers/chromedriver" />
+        <classes>
+            <class name="CrossBrowserTestingScript"></class>
+        </classes>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browser" value="Firefox" />
+        <parameter name="driver_name" value="webdriver.gecko.driver" />
+        <parameter name="driver_path" value="src/test/resources/webdrivers/geckodriver" />
+        <classes>
+            <class name="CrossBrowserTestingScript"></class>
+        </classes>
+    </test>
+
+    <test name="SafariTest">
+        <parameter name="browser" value="Safari" />
+        <parameter name="driver_name" value="webdriver.safari.driver" />
+        <parameter name="driver_path" value="s/usr/bin/safaridriver" />
+        <classes>
+            <class name="CrossBrowserTestingScript"></class>
+        </classes>
+    </test>
+
+
+</suite>
