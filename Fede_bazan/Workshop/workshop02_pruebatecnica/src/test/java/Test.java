@@ -37,6 +37,6 @@ public class Test {
         Home home = new Home(driver);
         SectionMensOuterwear sectionMensOuterwear = new SectionMensOuterwear(driver);
         home.clickOnASection();
-        sectionMensOuterwear.checkMensOuterwear();
+        Assert.assertTrue(sectionMensOuterwear.checkMensOuterwear());
     }
 }

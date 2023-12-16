@@ -1,7 +1,9 @@
 package shop.polymerproject.org;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class SectionMensOuterwear {
@@ -13,9 +15,13 @@ public class SectionMensOuterwear {
         this.driver = driver;
     }
 
-    public void checkMensOuterwear() {
-        String tittleText=driver.findElement(tittleXpath).getText();
-        Assert.assertEquals("Men's Outerwear",tittleText);
+    public boolean checkMensOuterwear() {
+        Home home = new Home(driver);
+        WebElement shadowHost = driver.findElement(By.xpath("//shop-app[@page = 'list']"));
+        SearchContext shadowRootZero = home.expandRootElement(shadowHost);
+        WebElement shadowRoot1 = shadowRootZero.findElement(By.cssSelector("iron-pages > shop-list"));
+        SearchContext shadowRootOne = home.expandRootElement(shadowRoot1);
+        return shadowRootOne.findElement(By.cssSelector("ul")).isDisplayed();
     }
 
 
