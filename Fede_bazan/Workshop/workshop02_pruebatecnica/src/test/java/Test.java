@@ -19,6 +19,7 @@ public class Test {
     public void setup(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
+        driver.get("https://shop.polymer-project.org");
     }
 
     @AfterTest
@@ -28,12 +29,11 @@ public class Test {
 
     @org.testng.annotations.Test
     public void testConnection(){
-        driver.get("https://shop.polymer-project.org");
         Assert.assertEquals("Home - SHOP",driver.getTitle());
     }
 
     @org.testng.annotations.Test
-    public void numberOfSection(){
+    public void numberOfSection() throws InterruptedException {
         Home home = new Home(driver);
         SectionMensOuterwear sectionMensOuterwear = new SectionMensOuterwear(driver);
         home.clickOnASection();
