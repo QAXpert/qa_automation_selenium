@@ -8,16 +8,18 @@ import org.testng.annotations.BeforeTest;
 import testingyes.Article;
 import testingyes.Cart;
 import testingyes.Home;
+import testingyes.Order;
 
 public class Test {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @BeforeTest
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("http://www.testingyes.com/onlineshop/");
+        driver.manage().window().fullscreen();
     }
 
     @AfterTest
@@ -60,6 +62,20 @@ public class Test {
         org.testng.Assert.assertTrue(cart.addedCheclArticle());
     }
 
-    public void
+    //Completar formulario
+    @org.testng.annotations.Test
+    public void completeFormUserValues() throws InterruptedException {
+        watchCart();
+        Cart cart = new Cart(driver);
+        Order order = new Order(driver);
+        String name = "Julio Pablo Federico";
+        String lastname = "Bazan";
+        String email = "juliopablofedericobazan@gmail.com";
+        String comnpany = "Zangusheria Milanga Corporeyshion";
+        String address = "In the Messi's hearth";
+        cart.clickOnProceedToCheckBtm();
+        order.completeFormPersonalInformation(name,lastname,email);
+        order.completeFormAdressInformation();
+    }
 }
 

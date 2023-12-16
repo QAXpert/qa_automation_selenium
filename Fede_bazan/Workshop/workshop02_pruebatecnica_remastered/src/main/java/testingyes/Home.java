@@ -9,10 +9,10 @@ import java.util.List;
 
 public class Home {
 
-    WebDriver driver;
+    private WebDriver driver;
 
-    By headerElementID = By.id("header");
-    By elementImgXpath = By.xpath("//*[@id=\"content\"]/section/div/article[1]/div/a/img");
+    private By headerElementID = By.id("header");
+    private By elementImgXpath = By.xpath("//*[@id=\"content\"]/section/div/article[1]/div/a/img");
 
     public Home(WebDriver driver) {
         this.driver = driver;
