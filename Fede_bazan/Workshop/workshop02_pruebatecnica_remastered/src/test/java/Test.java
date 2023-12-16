@@ -70,12 +70,23 @@ public class Test {
         Order order = new Order(driver);
         String name = "Julio Pablo Federico";
         String lastname = "Bazan";
-        String email = "juliopablofedericobazan@gmail.com";
+        String email = "testeantetesteadortesteando@gmail.com";
         String comnpany = "Zangusheria Milanga Corporeyshion";
         String address = "In the Messi's hearth";
+        String city = "En la ciudad de la furia";
+        String zCode = "45315";
+        String deliveryMsg = "A veces el perro muerde, pero si corres muerde mas fuerte";
         cart.clickOnProceedToCheckBtm();
         order.completeFormPersonalInformation(name,lastname,email);
-        order.completeFormAdressInformation();
+        order.completeFormAdressInformation(comnpany,address,city,zCode);
+        order.completeDeliveryComment(deliveryMsg);
+    }
+
+    @org.testng.annotations.Test
+    public void completePayment() throws InterruptedException {
+        completeFormUserValues();
+        Order order = new Order(driver);
+        order.completePayment();
     }
 }
 
