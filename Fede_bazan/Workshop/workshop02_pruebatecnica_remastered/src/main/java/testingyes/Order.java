@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class Order {
+public class Order extends Base{
 
     WebDriver driver;
 
@@ -37,45 +37,47 @@ public class Order {
     private By payamentOpc1Id = By.id("payment-option-1");
     private By termAndCondCheckId = By.id("conditions_to_approve[terms-and-conditions]");
     private By continuePaymentBtmClass = By.xpath("//*[@id=\"payment-confirmation\"]/div[1]/button");
+
     public Order(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
 
-
-    public void completeFormPersonalInformation(String name,String lastName,String email){
-        driver.findElement(firstNameLabelName).sendKeys(name);
-        driver.findElement(lastNameLabelName).sendKeys(lastName);
-        driver.findElement(emailLabelName).sendKeys(email);
-        driver.findElement(receiveOffersCheckXpath).click();
-        driver.findElement(signUpForNewLetCheckXpath).click();
-        driver.findElement(iAgreeTermsCheckXpath).click();
-        driver.findElement(continueBtmXpath).click();
+    public void completeFormPersonalInformation(String name, String lastName, String email){
+        sendKeys(firstNameLabelName,name);
+        sendKeys(lastNameLabelName,lastName);
+        sendKeys(emailLabelName,email);
+        clickOnElement(receiveOffersCheckXpath);
+        clickOnElement(signUpForNewLetCheckXpath);
+        clickOnElement(iAgreeTermsCheckXpath);
+        clickOnElement(continueBtmXpath);
     }
 
     public void completeFormAdressInformation(String company, String address,String city,String zcode){
-        WebElement stateSelected = driver.findElement(By.name("id_state"));
+        WebElement stateSelected = findElement(By.name("id_state"));
         Select selectState = new Select(stateSelected);
-        WebElement countrySelected = driver.findElement(By.name("id_country"));
+        WebElement countrySelected = findElement(By.name("id_country"));
         Select selectCountry = new Select(countrySelected);
-        driver.findElement(companyLabelName).sendKeys(company);
-        driver.findElement(addressLabelName).sendKeys(address);
-        driver.findElement(cityLabelName).sendKeys(city);
+        sendKeys(companyLabelName,company);
+        sendKeys(addressLabelName,address);
+        sendKeys(cityLabelName,city);
         selectState.selectByValue("4");
         selectCountry.selectByValue("21");
-        driver.findElement(zipCodeLabelName).sendKeys(zcode);
-        driver.findElement(continuneBtmAddressName).click();
+        sendKeys(zipCodeLabelName,zcode);
+        clickOnElement(continuneBtmAddressName);
     }
 
     public void completeDeliveryComment(String deliveryMsg){
-        driver.findElement(deliveryCommentId).sendKeys(deliveryMsg);
-        driver.findElement(continueDeliveryBtmName).click();
+        sendKeys(deliveryCommentId,deliveryMsg);
+        clickOnElement(continueDeliveryBtmName);
     }
 
     public void completePayment() throws InterruptedException {
-        driver.findElement(payamentOpc1Id).click();
-        Thread.sleep(3000);
-        driver.findElement(termAndCondCheckId).click();
-        driver.findElement(continuePaymentBtmClass).click();
+        clickOnElement(payamentOpc1Id);
+        scrollTo(continuePaymentBtmClass);
+        //while con el elemento "hasta que este dispoonible"
+        clickOnElement(termAndCondCheckId);
+        Thread.sleep(5000);
+        clickOnElement(continuePaymentBtmClass);
     }
 }

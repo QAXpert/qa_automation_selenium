@@ -5,10 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
-import testingyes.Article;
-import testingyes.Cart;
-import testingyes.Home;
-import testingyes.Order;
+import testingyes.*;
 
 public class Test {
 
@@ -63,6 +60,8 @@ public class Test {
     }
 
     //Completar formulario
+
+    // completar datos de cliente
     @org.testng.annotations.Test
     public void completeFormUserValues() throws InterruptedException {
         watchCart();
@@ -82,11 +81,21 @@ public class Test {
         order.completeDeliveryComment(deliveryMsg);
     }
 
+    //comletar datos de pago
+
     @org.testng.annotations.Test
-    public void completePayment() throws InterruptedException {
+    public void completeValuesPayment() throws InterruptedException {
         completeFormUserValues();
         Order order = new Order(driver);
         order.completePayment();
+    }
+
+    @org.testng.annotations.Test
+    public void checkSuccessfullPay() throws InterruptedException {
+        completeValuesPayment();
+        String expectedMsg = "\uE876Your order is confirmeed ";
+        OrderConfirmation orderConfirmation = new OrderConfirmation(driver);
+        org.testng.Assert.assertEquals(orderConfirmation.checkBuyMsg(),expectedMsg);
     }
 }
 
