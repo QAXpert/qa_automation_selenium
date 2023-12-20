@@ -1,6 +1,6 @@
 # Prueba técnica Workshop #2 - 🥷 [Ninja For Testing] 
 
-Este proyecto de automatización con Selenium Java 🤖 resuelve una prueba técnica de QA Automation Jr para el [e-commerce](https://shop.polymer-project.org/). El objetivo es automatizar diversas funcionalidades del sitio.
+Este proyecto de automatización con Selenium Java 🤖 resuelve una prueba técnica de QA Automation Jr para el [e-commerce](http://www.testingyes.com/onlineshop/). El objetivo es automatizar diversas funcionalidades del sitio.
 
 **Funcionalidades a Automatizar:**
 1. Ver artículo 📰
